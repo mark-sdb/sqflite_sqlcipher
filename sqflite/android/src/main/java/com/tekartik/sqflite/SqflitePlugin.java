@@ -98,15 +98,6 @@ public class SqflitePlugin implements FlutterPlugin, MethodCallHandler {
         this.context = context.getApplicationContext();
     }
 
-    //
-    // Plugin registration.
-    //
-    @SuppressWarnings("deprecation")
-    public static void registerWith(io.flutter.plugin.common.PluginRegistry.Registrar registrar) {
-        SqflitePlugin sqflitePlugin = new SqflitePlugin();
-        sqflitePlugin.onAttachedToEngine(registrar.context(), registrar.messenger());
-    }
-
     @Override
     public void onAttachedToEngine(FlutterPluginBinding binding) {
         onAttachedToEngine(binding.getApplicationContext(), binding.getBinaryMessenger());
